@@ -53,9 +53,11 @@ int solution(int n, vector<vector<int>> costs) {
 	}
 	
 	for(int i = 0; i < costs.size(); i++){
+		
+		//사이클이 발견되지 않았다면 
 		if(!isCycle(costs[i][0], costs[i][1])){
-			answer+=costs[i][2];
-			unionn(costs[i][0], costs[i][1]);
+			answer+=costs[i][2];	//간선을 추가하고 
+			unionn(costs[i][0], costs[i][1]);	//부모를 합친다. 
 		}
 	}
 	cout << answer << endl;
