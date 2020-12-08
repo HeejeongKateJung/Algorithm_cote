@@ -41,3 +41,8 @@ int solution(vector<vector<int>> jobs) {
     }
     return answer / jobs.size();//평균을 구해야하므로 총작업한 개수로 나눠줌
 }
+
+int main(void){
+	
+	return 0;
+}
