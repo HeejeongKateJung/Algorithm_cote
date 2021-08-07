@@ -3,6 +3,7 @@ package com.company;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Kakao2021 {
   public int solution72413(int n, int s, int a, int b, int[][] fares) {
@@ -46,8 +47,33 @@ public class Kakao2021 {
     return answer;
   }
 
-  public int[] solution72412(String[] info, String[] query) {
+//  private Map<String, Integer> infoMap;
 
-    String[][] infoMa
-  }
+//  public int[] solution72412(String[] info, String[] query) {
+//
+//    // 1. 주어진 info 에 대해서 조건에 '-'를 추가한 모든 경우의 수를 구해준다.
+//    // 예를들어 java backend junior pizza 150 인 경우
+//    // - backend junior pizza 150
+//    // java - junior pizza 150
+//    // 뭐 이런 식이다.
+//    infoMap = new HashMap<>();
+//    for (String infoString : info) {
+//      String[] conditions = infoString.split(" ");
+//
+//    }
+//
+//  }
+
+  // "-" 를 포함한 모든 경우의 수를 반
+//  private void combination(String[] conditions, String depth, String str) {
+//    if (depth == 4) {
+//      if (!infoMap.containsKey(str)) {
+//        infoMap.put(str, Integer.parseInt(conditions[4]));
+//        return;
+//      }
+//
+//      combination(conditions, depth+1, str);
+//
+//    }
+//  }
 }
