@@ -1,6 +1,7 @@
 package com.company;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
+import com.sun.tools.javac.util.Pair;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -31,8 +32,44 @@ public class Kakao2021DevMatching {
   public int[] solution77485(int rows, int columns, int[][] queries) {
     int[] answer = {};
 
+    int[][] map = new int[rows+1][columns+1];
+    int num = 1;
+    for (int i = 1; i <= rows; i++){
+      for(int j = 1; j <= columns; j++) {
+        map[i][j] = num;
+        num++;
+      }
+    }
 
-    return answer;
+
+    for (int[] query : queries) {
+
+      int x1 = query[0];
+      int y1 = query[1];
+      int x2 = query[2];
+      int y2 = query[3];
+
+      int temp = map[x1][y1];
+      int min = rows*columns;
+      // 왼쪽 세로 돌리기
+      for (int i = x1+1; i <= x2; i++) {
+        int tmp = map[i][y1];
+        map[i - 1][y1] = tmp;
+        min = Math.min(tmp, min);
+      }
+    }
+
+
+   return answer;
+  }
+
+  private void printMap(int rows, int columns, int[][] map) {
+    for (int i = 1; i <= rows; i++){
+      for(int j = 1; j <= columns; j++) {
+        System.out.print(map[i][j] + " ");
+      }
+      System.out.println();
+    }
   }
 
   public int[] solution77486(String[] enroll, String[] referral, String[] seller, int[] amount) {
