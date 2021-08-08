@@ -47,7 +47,7 @@ public class Kakao2021 {
     return answer;
   }
 
-//  private Map<String, Integer> infoMap;
+  private Map<String, Integer> infoMap;
 
 //  public int[] solution72412(String[] info, String[] query) {
 //
